@@ -1,0 +1,4 @@
+repository "ComsciGame_2023@Stir_Fry@cloud"
+  path "/"
+    br "/main"
+    co "/main"
