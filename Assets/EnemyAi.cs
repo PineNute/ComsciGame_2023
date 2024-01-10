@@ -1,3 +1,4 @@
+//Declares what the code is using 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
+
     public NavMeshAgent agent;
 
     public Transform player;
@@ -32,7 +34,7 @@ public class EnemyAi : MonoBehaviour
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
-
+//Updates the player
     private void Update()
     {
         //Check for sight and attack range
@@ -57,6 +59,8 @@ public class EnemyAi : MonoBehaviour
         if (distanceToWalkPoint.magnitude < 1f)
             walkPointSet = false;
     }
+
+    // Calculates the walk point when no player in area
     private void SearchWalkPoint()
     {
         //Calculate random point in range
@@ -68,7 +72,7 @@ public class EnemyAi : MonoBehaviour
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
     }
-
+// Calculate the when its ready to chase player
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
@@ -81,6 +85,7 @@ public class EnemyAi : MonoBehaviour
 
         transform.LookAt(player);
 
+// Declares what will happen after the attack
         if (!alreadyAttacked)
         {
             ///Attack code here
@@ -98,6 +103,7 @@ public class EnemyAi : MonoBehaviour
         alreadyAttacked = false;
     }
 */
+// Taking damage
     public void TakeDamage(int damage)
     {
         health -= damage;
