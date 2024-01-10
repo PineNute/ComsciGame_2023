@@ -1,6 +1,6 @@
 # Survive game project
 
-## A prototype of the unity project for ICS4UQ-01
+## A Prototype of the Unity Project for ICS4UQ-01
 
 This project is a prototype of the surviver game Survive. Sruvive is a game where the user tries to not die to eneimes that spawn on screen in waves over increments of time.
 It includes basic elements and concepts  that will be featured in the main game. 
