@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void Play()
     {
+    //Code to enable intro screen
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
     }
 
